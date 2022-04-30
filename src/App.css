@@ -1,62 +1,10 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* .App {
-  max-width: 1280px;
-  margin: auto;
-  padding: 0 2rem;
-} */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html,
 body {
   width: 100%;
-  min-height: 100vh;
   box-sizing: border-box;
   font-family: roboto;
   background: #faf6f6;
   color: rgb(172, 154, 154);
-  /* margin: 0 auto; */
 }
 
 /* nav */
@@ -66,17 +14,14 @@ body {
   background-image: url("./images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* max-width: 100%; */
   min-height: 400px;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
-  /* margin-top: 4rem; */
 }
 
 .nav ul {
   display: flex;
-  /* align-items: center; */
   margin-top: 4rem;
   list-style: none;
 }
@@ -89,32 +34,21 @@ body {
   margin-left: 5rem;
 }
 
-/* .list-nav {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
-  margin-top: 5rem;
-} */
-
 .list-nav li:last-of-type {
   margin-right: 5rem;
 }
 
 /* hero section */
 .container {
-  /* max-width: 840px; */
-  /* height: 400px; */
-  max-width: 50rem;
-  margin: auto;
-  padding: 0 2rem;
-  /* margin: auto;
-  padding: 0 0.5rem; */
-  /* border: 1px solid #282c34; */
-  /* position: absolute; */
-  top: 50%;
-  right: 50%;
-  transform: translate(-2%, -5%);
+  top: -100px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_contents {
+  width: 50rem;
 }
 
 .hero {
@@ -131,12 +65,10 @@ body {
 }
 
 .hero-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
+  top: -30px;
   left: 50%;
-  transform: translate(5%, -45%);
+  right: 50%;
+  position: absolute;
 }
 
 .hero-header h1 {
@@ -161,8 +93,6 @@ body {
 }
 
 .hero-btn button {
-  /* width: 13rem;
-  height: 2.5rem; */
   border: none;
   color: #fff;
   padding: 0.7rem 2.5rem;
@@ -181,8 +111,6 @@ body {
 }
 
 .hero-btn-img button {
-  /* width: 10rem;
-  height: 2.5rem; */
   border: none;
   color: rgb(14, 119, 96);
   padding: 0.7rem 1.5rem;
@@ -204,8 +132,6 @@ body {
 .hero-btn-img img {
   display: flex;
   align-items: flex-start;
-  /* width: 70px;
-  min-height: 70px; */
   border-radius: 2rem;
   position: absolute;
   background: rgb(14, 119, 96);
@@ -215,7 +141,6 @@ body {
 .hero-progress {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: space-between;
   min-height: 15rem;
   background: #f5f6f6;
@@ -233,7 +158,6 @@ body {
   align-items: center;
   list-style: none;
   margin-top: 3rem;
-  /* line-height: 3; */
 }
 
 .hero-progress li {
@@ -276,7 +200,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* height: 70rem; */
   margin-bottom: 2rem;
   line-height: 2;
   letter-spacing: 2.2;
@@ -327,7 +250,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* margin-bottom: 2rem; */
 }
 
 .about-btn h2 {
@@ -339,11 +261,8 @@ body {
 }
 
 .about-bottom button {
-  /* width: 10rem;
-  height: 2.2rem; */
   border: none;
   color: #fff;
-  /* padding: 0 1rem 0; */
   padding: 0.25rem 1.2rem;
   font-family: roboto;
   letter-spacing: 1.2px;
@@ -361,190 +280,121 @@ body {
   background: #979797;
 }
 
-@media (min-width: 920px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    min-width: 20rem;
-  }
-
-  .hero-logo .hero {
-    position: fixed;
-  }
+.nav li p {
+  margin-right: 2rem;
 }
 
-@media (max-width: 510px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    min-width: 10rem;
-    padding: 2rem;
-    transform: translate(3%, -4%);
-  }
+.list-nav {
+  width: 40px;
+  height: 30px;
+  display: block;
+  border: none;
+  padding: 0px;
+  margin-bottom: 3.85rem;
+  margin-top: 3.85rem;
+  margin-right: 1rem;
+  background: linear-gradient(
+    to bottom,
+    #ddd,
+    #ddd 10%,
+    #ddd 20%,
+    #282c34 40%,
+    #ddd 40%,
+    #ddd 60%,
+    #282c34 60%,
+    #282c34 80%,
+    #ddd 80%,
+    #ddd 100%
+  );
+}
 
-  .hero-logo .hero {
-    position: fixed;
-  }
+.list-nav li {
+  visibilty: hidden;
+  position: fixed;
+  top: 50px;
+  left: -250px;
+  width: 200px;
+  min-height: 100%;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
 
-  .hero-logo {
-    right: 50%;
-  }
+.hero-button button {
+  margin-bottom: 1rem;
+}
 
-  .hero-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.hero-btn button {
+  display: flex;
+  justify-content: center;
+  padding: 0.7rem 2.5rem;
+}
 
-  .hero-header h1 {
-    display: flex;
-    text-align: center;
-    margin-top: 1.5rem;
-    line-height: -1px;
-  }
+.hero-btn-img button {
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
 
-  .hero-header p {
-    margin-top: 1rem;
-    line-height: 2;
-  }
+.hero-btn-img img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: inherit;
+  width: 50px;
+  min-height: 50px;
+  margin-bottom: 1rem;
+  margin-right: 3rem;
+}
 
-  /* .hero-header h1{
-    margin-top: re;
-  } */
-  /* .nav .list-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
+.hero-progress {
+  overflow: hidden;
+}
 
-  .nav li p {
-    margin-right: 2rem;
-  }
-  .list-nav {
-    width: 40px;
-    height: 30px;
-    display: block;
-    border: none;
-    padding: 0px;
-    margin-bottom: 3.85rem;
-    margin-top: 3.85rem;
-    margin-right: 1rem;
-    background: linear-gradient(
-      to bottom,
-      #ddd,
-      #ddd 10%,
-      #ddd 20%,
-      #282c34 40%,
-      #ddd 40%,
-      #ddd 60%,
-      #282c34 60%,
-      #282c34 80%,
-      #ddd 80%,
-      #ddd 100%
-    );
-  }
+.hero-progress ul {
+  display: flex;
+  flex-direction: column;
+}
+.hero-progress p {
+  margin-top: 1rem;
+}
 
-  .list-nav li {
-    visibilty: hidden;
-    position: fixed;
-    top: 50px;
-    left: -250px;
-    width: 200px;
-    min-height: 100%;
-    /* background-color: #3d0e61; */
-    padding: 0px 10px;
-    box-sizing: border-box;
-  }
+.vertical-line {
+  display: block;
+  margin: 1px 2px;
+  margin-bottom: 1rem;
+  min-width: 7rem;
+  border-bottom: 1px solid #979797;
+}
 
-  .hero-button button {
-    margin-bottom: 1rem;
-  }
+#myBar {
+  width: 12rem;
+  min-height: 0.55rem;
+}
+.about-page {
+  display: flex;
+  flex-direction: column;
+}
 
-  .hero-btn button {
-    display: flex;
-    justify-content: center;
-    padding: 0.7rem 2.5rem;
-  }
+.about-list .about-header {
+  display: flex;
+  flex-direction: column;
+}
 
-  .hero-btn-img button {
-    display: flex;
-    justify-content: space-between;
-    display: none;
-  }
+.about-list .about-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 
-  .hero-btn-img img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: inherit;
-    width: 50px;
-    min-height: 50px;
-    margin-bottom: 1rem;
-    margin-right: 3rem;
-  }
-
-  .hero-progress {
-    overflow: hidden;
-  }
-
-  .hero-progress ul {
-    display: flex;
-    flex-direction: column;
-  }
-  .hero-progress p {
-    margin-top: 1rem;
-  }
-
-  .vertical-line {
-    display: block;
-    margin: 1px 2px;
-    /* padding: 0.5em 0; */
-    margin-bottom: 1rem;
-    min-width: 7rem;
-    border-bottom: 1px solid #979797;
-  }
-
-  #myBar {
-    width: 12rem;
-    min-height: 0.55rem;
-  }
-  .about-page {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about-list .about-header {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about-list .about-bottom {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    /* position: fixed; */
-  }
-
-  /* .about-bottom {
-    margin-bottom: 2rem;
-  } */
-
-  .about-list .about-bottom button {
-    /* padding: 0 1rem 0; */
-    min-width: 2rem;
-    display: block;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    letter-spacing: 1px;
-    border-radius: 1rem;
-
-    /* 
-    outline: none;
-    overflow: hidden; */
-  }
+.about-list .about-bottom button {
+  min-width: 2rem;
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  letter-spacing: 1px;
+  border-radius: 1rem;
 }
