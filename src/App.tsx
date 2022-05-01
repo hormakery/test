@@ -18,9 +18,7 @@ function App() {
     <div className="App">
       <div className="nav">
         <ul>
-          <li>
-            <p>crowdfunding</p>
-          </li>
+          <li>crowdfunding</li>
         </ul>
 
         <div className="list-nav">
@@ -56,8 +54,8 @@ function App() {
                 <img
                   className="btn-img"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRngsJOdiYUUlKKW2bnMs66sHctMkQRnRGNEg&usqp=CAU"
-                  width={50}
-                  height={50}
+                  width={49}
+                  height={49}
                   alt=""
                 />
                 <button>Bookmarked</button>
