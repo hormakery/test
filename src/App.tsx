@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 // interface ItestFunc {
@@ -18,7 +17,7 @@ function App() {
     <div className="App">
       <div className="nav">
         <ul>
-          <li>crowdfunding</li>
+          <li className="title">crowdfunding</li>
         </ul>
 
         <div className="list-nav">
@@ -33,9 +32,9 @@ function App() {
       <div className="container">
         <div className="hero-logo">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Motorola_M_symbol_black.svg/1200px-Motorola_M_symbol_black.svg.png"
-            width={50}
-            height={50}
+            src="/assets/images/logo-mastercraft.svg"
+            width={55}
+            height={55}
             alt=""
           />
         </div>
@@ -43,7 +42,7 @@ function App() {
           <div className="hero">
             <div className="hero-header">
               <h1>Mastercraft Bamboo Monitor Riser</h1>
-              <p>A beautiful & handcrafted monitor stand to reduce neck and eyes strain.</p>
+              <p>A beautiful {"&"} handcrafted monitor stand to reduce neck and eyes strain.</p>
             </div>
 
             <div className="hero-button">
@@ -51,11 +50,11 @@ function App() {
                 <button>Back this project</button>
               </div>
               <div className="hero-btn-img">
-                <img
+                 <img
                   className="btn-img"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRngsJOdiYUUlKKW2bnMs66sHctMkQRnRGNEg&usqp=CAU"
-                  width={49}
-                  height={49}
+                  src="/assets/images/icon-bookmark.svg"
+                  width={47}
+                  height={47}
                   alt=""
                 />
                 <button>Bookmarked</button>
@@ -69,12 +68,12 @@ function App() {
                 <h2>$89,914</h2>
                 <p>of $100,000 backend</p>
               </li>
-              <li className="vertical-line"></li>
+            
               <li>
                 <h2>5,007</h2>
                 <p>total backers</p>
               </li>
-              <li className="vertical-line"></li>
+              
               <li>
                 <h2>56</h2>
                 <p>days left</p>
@@ -148,7 +147,7 @@ function App() {
 
             <div className="about-list">
               <div className="about-header">
-                <h3>Mahogamy Special Edition</h3>
+                <h3 className="dark-gray-title">Mahogamy Special Edition</h3>
                 <p>Pledge $200 or more</p>
               </div>
 

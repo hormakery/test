@@ -1,10 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
-  width: 100%;
-  box-sizing: border-box;
-  font-family: roboto;
+  font-size: 1rem;
+  font-family: commisioner;
   background: #faf6f6;
-  color: rgb(172, 154, 154);
+  /* color: #a9a9a9; */
 }
 
 /* nav */
@@ -19,7 +26,6 @@ body {
   min-height: 400px;
   color: #fff;
   font-size: 16px;
-  font-weight: bold;
 }
 
 .nav ul {
@@ -32,8 +38,10 @@ body {
   margin-right: 1.2rem;
 }
 
-.nav ul li:first-of-type {
-  margin-left: 2rem;
+ .title {
+  margin-left: 5rem;
+  font-size: 900;
+  font-weight: 800;
 }
 
 .list-nav li:last-of-type {
@@ -43,27 +51,26 @@ body {
 /* hero section */
 .container {
   top: -100px;
-  display: flex;
   position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .container_contents {
-  width: 50rem;
+  max-width: 50rem;
 }
 
 .hero {
+  /* max-width: 375px ; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 15rem;
-  background: #f5f6f6;
+  background: #fff;
   padding: 0 2rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
-  border: 1px solid #ddd;
-  box-shadow: 0px 2px 2px 1px #f5f6f6;
 }
 
 .hero-logo {
@@ -77,14 +84,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #282c34;
+  color: #000;
   line-height: 1.2;
+  margin-top: 4rem;
 }
 
 .hero-header p {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .hero-button {
@@ -98,47 +107,47 @@ body {
 .hero-btn button {
   border: none;
   color: #fff;
-  padding: 0.8rem 2.5rem;
+  padding: 1rem 2.6rem;
   font-family: roboto;
   font-weight: bold;
   letter-spacing: 1.2px;
   border-radius: 2rem;
-  background: rgb(14, 119, 96);
+  background: #008b8b;
   outline: none;
 }
 
 .hero-btn-img {
   display: flex;
-  flex-direction: row;
+  justify-content: start;
   align-items: center;
+  position: relative;
 }
 
 .hero-btn-img button {
   border: none;
-  color: rgb(14, 119, 96);
-  padding: 0.8rem 1.6rem;
-  font-family: Roboto;
+  color: #008b8b;
+  padding: 1rem 1.7rem;
   font-weight: bold;
   letter-spacing: 1.2px;
-  margin-right: 1.8rem;
   margin-left: 2.2rem;
   border-radius: 2rem;
-  background: #ddd;
+  background-color: #a9a9a9;
   outline: none;
+  text-align: center;
 }
 
 .hero-btn-img button:hover {
-  color: #979797;
-  background: #ddd;
+  color: #a9a9a9;
+  background: #a9a9a9;
 }
 
 .hero-btn-img img {
   display: flex;
   align-items: flex-start;
   border-radius: 2rem;
-  margin-left: 0.6rem;
+  margin-left: 0.8rem;
   position: absolute;
-  background: rgb(14, 119, 96);
+  background: #008b8b;
 }
 
 /* progress */
@@ -147,12 +156,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 15rem;
-  background: #f5f6f6;
+  background-color: #fff;
   border-radius: 0.25rem;
   padding: 0 2rem;
   margin-bottom: 2rem;
-  border: 1px solid #ddd;
-  box-shadow: 0px 2px 2px 1px #f5f6f6;
   overflow: hidden;
 }
 
@@ -166,36 +173,35 @@ body {
 
 .hero-progress li {
   margin-right: 2rem;
-  font-weight: 800;
-  color: #282c34;
+  padding: 1rem;
+  font-weight: 900;
+  color: #000;
+  border-right: 1px solid #a9a9a9;
 }
 
-.vertical-line {
-  display: inline-block;
-  border-left: 1px solid #ccc;
-  margin: 0 10px;
-  min-height: 3rem;
+.hero-progress li:last-child{
+  border: none;
 }
 
 .hero-progress p {
   margin-right: 0 1rem 8rem;
   font-weight: 400;
-  color: rgb(172, 154, 154);
+  color: #a9a9a9;
 }
 
 .hero-progress-bar {
   display: flex;
-  max-width: 30rem;
-  background-color: #ddd;
+  max-width: 40rem;
+  background-color: #a9a9a9;
   margin: 3rem 2rem 5rem;
   border-radius: 10px;
 }
 
 #myBar {
-  width: 25rem;
-  min-height: 0.75rem;
+  width: 35rem;
+  height: 0.75rem;
   border-radius: 10px;
-  background-color: rgb(39, 153, 125);
+  background-color: #008b8b;
   transition: "width 1s ease-in-out";
   outline: none;
 }
@@ -210,15 +216,14 @@ body {
   margin-bottom: 2rem;
   line-height: 2;
   letter-spacing: 2.2;
-  background: #f5f6f6;
+  background-color: #fff;
   padding: 0.25rem 2rem;
   border-radius: 0.25rem;
-  border: 1px solid #ddd;
-  box-shadow: 0px 2px 2px 1px #f5f6f6;
+
 }
 
 .about-page-header {
-  color: #282c34;
+  color: #000;
   margin: 2rem 0;
 }
 
@@ -227,7 +232,7 @@ body {
   margin: 1rem 0 1rem;
   padding: 0.1rem 1rem;
   border-radius: 0.25rem;
-  border: 1px solid rgb(172, 154, 154);
+  border: 1px solid #a9a9a9;
   overflow: hidden;
 }
 
@@ -239,11 +244,11 @@ body {
 }
 
 .about-header h3 {
-  color: #282c34;
+  color: #000;
 }
 
 .about-header p {
-  color: rgb(39, 153, 125);
+  color: #26d9cd;
 }
 
 .about-bottom {
@@ -258,10 +263,15 @@ body {
 }
 
 .about-btn h2 {
-  color: #282c34;
+  color: #000;
 }
 .about-btn p {
+  color: #a9a9a9;
   margin-left: 0.5rem;
+}
+
+.about-header .dark-gray-title{
+  color: #a9a9a9;
 }
 
 .about-bottom button {
@@ -273,15 +283,15 @@ body {
   padding: 0.6rem 0.8rem;
   letter-spacing: 1px;
   border-radius: 2rem;
-  background: rgb(14, 119, 96);
+  background: #008b8b;
 }
 
 .about-bottom .mid-btn {
-  background: rgb(16, 180, 145);
+  background: #008b8b;
 }
 
 .about-bottom .last-btn {
-  background: #979797;
+  background: #a9a9a9;
 }
 
 /* end of about page */
@@ -304,7 +314,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .nav {
     display: flex;
     flex-direction: row;
@@ -314,7 +324,7 @@ body {
   }
 
   .nav ul li:first-of-type {
-    margin-left: 5rem;
+    margin-right: 15rem;
   }
 
   .list-nav {
@@ -369,69 +379,183 @@ body {
     box-sizing: border-box;
   }
 
-  .nav ul li:first-of-type {
-    margin-right: 3rem;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 15rem;
   }
 }
 
-/* .hero-button button {
-  margin-bottom: 1rem;
-}
+@media (max-width: 375px) {
 
-.hero-btn button {
-  display: flex;
-  justify-content: center;
-  padding: 0.7rem 2.5rem;
-}
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 100%; */
+    min-height: 300px;
+  }
 
-.hero-btn-img button {
-  display: flex;
-  justify-content: space-between;
-  display: none;
-}
+  .list-nav {
+    /* display: flex; */
 
-.hero-btn-img img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: inherit;
-  width: 50px;
-  min-height: 50px;
-  margin-bottom: 1rem;
-  margin-right: 3rem;
-}
+    width: 20px;
+    height: 10px;
+    display: block;
+    border: none;
+    padding: 6px;
+    margin-bottom: 14rem;
+    margin-top: 4.3rem;
+    margin-right: 1rem;
+    background: linear-gradient(
+      to bottom,
+      #fff,
+      #fff 20%,
+      #fff 10%,
+      #000 40%,
+      #fff 40%,
+      #fff 60%,
+      #000 60%,
+      #000 80%,
+      #fff 80%,
+      #fff 100%
+    );
+  }
 
-.hero-progress {
-  overflow: hidden;
-}
+  .list-nav li {
+    visibilty: hidden;
+    position: fixed;
+    top: 50px;
+    left: -250px;
+    width: 200px;
+    min-height: 100%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+  }
 
-.hero-progress ul {
-  display: flex;
-  flex-direction: column;
-}
-.hero-progress p {
-  margin-top: 1rem;
-} */
 
-/* .vertical-line {
-  display: block;
-  margin: 1px 2px;
-  margin-bottom: 1rem;
-  min-width: 7rem;
-  border-bottom: 1px solid #979797;
-} */
+  .nav ul .title {
+    /* margin-right: 30rem; */
+  }
 
-/* #myBar {
-  width: 12rem;
-  min-height: 0.55rem;
-}
-.about-page {
-  display: flex;
-  flex-direction: column;
-}
+  .nav ul {
+    margin-top: 2rem;
+  }
 
-.about-list .about-header {
-  display: flex;
-  flex-direction: column;
-} */
+  
+  .container {
+    top: -50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container_contents {
+    max-width: 20rem;
+  }
+  
+  .hero-logo {
+    left: 45%;
+  }
+  
+  .hero-header h1 {
+    font-size: 1rem ;
+    align-self: center;
+    margin-top: 4rem;
+    line-height: 2px;
+  }
+
+  .hero-header p{
+    font-size: .8rem;
+  }
+
+  .hero-button {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero-btn button {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero-button .hero-btn-img button {
+    display: none;
+  }
+
+  .hero-btn-img {
+    justify-content: center;
+    margin-right: 3rem;
+  }
+
+  .hero-btn-img img {
+   align-self: flex-start;
+  }
+
+  .hero-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    
+  }
+
+  .hero-progress ul {
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .hero-progress h2{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
+
+  .hero-progress p{
+    margin-bottom: 1rem;
+  }
+
+  .hero-progress li {
+    border: none;
+    border-bottom: 2px solid #a9a9a9;
+  }
+
+  /* .hero-progress:first-of-type{
+    border-he: .3rem;
+  } */
+
+  .hero-progress-bar {
+    max-width: 15rem;
+  }
+
+  #myBar {
+    width: 10rem;
+    height: 0.5rem;
+    border-radius: 5rem;
+  }
+
+  .about-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-list-text{
+    margin-top: 2rem;
+  }
+
+  .about-bottom {
+    flex-direction: column;
+  }
+
+  .about-btn{
+    margin-top: 2rem;
+  }
+
+  .about-bottom button {
+    display: inline-block;
+    padding: 1rem .9rem;
+  }
+}
