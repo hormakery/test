@@ -16,27 +16,22 @@ function App() {
   return (
     <div className="App">
       <div className="nav">
-        <ul>
-          <li className="title">crowdfunding</li>
+        <span className="title">crowdfunding</span>
+
+        <ul className="list-nav">
+          <li>About</li>
+          <li>Discover</li>
+          <li>Get started</li>
         </ul>
 
-        <div className="list-nav">
-          <ul>
-            <li>About</li>
-            <li>Discover</li>
-            <li>Get started</li>
-          </ul>
-        </div>
+        <div className="menu"></div>
       </div>
+
+      <div className="hero-container"></div>
 
       <div className="container">
         <div className="hero-logo">
-          <img
-            src="/assets/images/logo-mastercraft.svg"
-            width={55}
-            height={55}
-            alt=""
-          />
+          <img src="/assets/images/logo-mastercraft.svg" width={55} height={55} alt="" />
         </div>
         <div className="container_contents">
           <div className="hero">
@@ -50,13 +45,7 @@ function App() {
                 <button>Back this project</button>
               </div>
               <div className="hero-btn-img">
-                 <img
-                  className="btn-img"
-                  src="/assets/images/icon-bookmark.svg"
-                  width={47}
-                  height={47}
-                  alt=""
-                />
+                <img className="btn-img" src="/assets/images/icon-bookmark.svg" width={47} height={47} alt="" />
                 <button>Bookmarked</button>
               </div>
             </div>
@@ -68,12 +57,12 @@ function App() {
                 <h2>$89,914</h2>
                 <p>of $100,000 backend</p>
               </li>
-            
+
               <li>
                 <h2>5,007</h2>
                 <p>total backers</p>
               </li>
-              
+
               <li>
                 <h2>56</h2>
                 <p>days left</p>
@@ -164,7 +153,7 @@ function App() {
                   <p>left</p>
                 </div>
 
-                <button className="last-btn">Select Reward</button>
+                <button className="last-btn">Out of Stock</button>
               </div>
             </div>
           </div>

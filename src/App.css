@@ -9,28 +9,29 @@
 html,
 body {
   font-size: 1rem;
-  font-family: commisioner;
+  font-family: Commissioner;
   background: #faf6f6;
   /* color: #a9a9a9; */
+  position: relative;
 }
 
 /* nav */
 .nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  background-image: url("./images/image-hero-desktop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-width: 100%;
-  min-height: 400px;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  height: 70px;
+  padding: 0 120px;
   color: #fff;
   font-size: 16px;
+  position: absolute;
+  top: 30px;
 }
 
 .nav ul {
   display: flex;
-  margin-top: 4rem;
   list-style: none;
 }
 
@@ -38,14 +39,46 @@ body {
   margin-right: 1.2rem;
 }
 
- .title {
-  margin-left: 5rem;
+.list-nav li:last-of-type {
+  margin-right: 0;
+}
+
+.title {
+  /* margin-left: 5rem; */
   font-size: 900;
   font-weight: 800;
 }
 
-.list-nav li:last-of-type {
-  margin-right: 5rem;
+.menu {
+  display: none;
+  width: 20px;
+  height: 10px;
+  border: none;
+  padding: 0px;
+  margin-right: 1rem;
+  background: linear-gradient(
+    to bottom,
+    #fff,
+    #fff 20%,
+    #000 20%,
+    #000 40%,
+    #fff 40%,
+    #fff 60%,
+    #000 60%,
+    #000 80%,
+    #fff 80%,
+    #fff 100%
+  );
+}
+
+/* hero container */
+
+.hero-container {
+  height: 80vh;
+  max-height: 80vh;
+  background-image: url("./images/image-hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* hero section */
@@ -55,6 +88,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 30px;
 }
 
 .container_contents {
@@ -175,11 +209,12 @@ body {
   margin-right: 2rem;
   padding: 1rem;
   font-weight: 900;
+  font-size: 900;
   color: #000;
   border-right: 1px solid #a9a9a9;
 }
 
-.hero-progress li:last-child{
+.hero-progress li:last-child {
   border: none;
 }
 
@@ -219,7 +254,6 @@ body {
   background-color: #fff;
   padding: 0.25rem 2rem;
   border-radius: 0.25rem;
-
 }
 
 .about-page-header {
@@ -264,20 +298,23 @@ body {
 
 .about-btn h2 {
   color: #000;
+  font-size: 900; 
+  font-weight: 700;
 }
+
 .about-btn p {
   color: #a9a9a9;
   margin-left: 0.5rem;
 }
 
-.about-header .dark-gray-title{
+.about-header .dark-gray-title {
   color: #a9a9a9;
 }
 
 .about-bottom button {
   border: 0;
   color: #fff;
-  font-family: roboto;
+  font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 0.6rem 0.8rem;
@@ -314,21 +351,18 @@ body {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 560px) {
   .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    min-height: 400px;
-  }
-
-  .nav ul li:first-of-type {
-    margin-right: 15rem;
+    padding: 0 30px;
   }
 
   .list-nav {
-    margin-top: 7.5rem;
+    display: none;
+    /* margin-top: 7.5rem; */
+  }
+
+  .menu {
+    display: block;
   }
 
   .container {
@@ -343,33 +377,8 @@ body {
     width: 25rem;
   }
 
-  .list-nav {
-    display: none;
-    width: 20px;
-    height: 10px;
-    display: block;
-    border: none;
-    padding: 0px;
-    margin-bottom: 14rem;
-    margin-top: 4.3rem;
-    margin-right: 1rem;
-    background: linear-gradient(
-      to bottom,
-      #ddd,
-      #ddd 10%,
-      #ddd 20%,
-      #282c34 40%,
-      #ddd 40%,
-      #ddd 60%,
-      #282c34 60%,
-      #282c34 80%,
-      #ddd 80%,
-      #ddd 100%
-    );
-  }
-
   .list-nav li {
-    visibilty: hidden;
+    visibility: hidden;
     position: fixed;
     top: 50px;
     left: -250px;
@@ -385,90 +394,16 @@ body {
     justify-content: center;
     min-height: 15rem;
   }
-}
 
-@media (max-width: 375px) {
-
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* width: 100%; */
-    min-height: 300px;
-  }
-
-  .list-nav {
-    /* display: flex; */
-
-    width: 20px;
-    height: 10px;
-    display: block;
-    border: none;
-    padding: 6px;
-    margin-bottom: 14rem;
-    margin-top: 4.3rem;
-    margin-right: 1rem;
-    background: linear-gradient(
-      to bottom,
-      #fff,
-      #fff 20%,
-      #fff 10%,
-      #000 40%,
-      #fff 40%,
-      #fff 60%,
-      #000 60%,
-      #000 80%,
-      #fff 80%,
-      #fff 100%
-    );
-  }
-
-  .list-nav li {
-    visibilty: hidden;
-    position: fixed;
-    top: 50px;
-    left: -250px;
-    width: 200px;
-    min-height: 100%;
-    padding: 0px 10px;
-    box-sizing: border-box;
-  }
-
-
-  .nav ul .title {
-    /* margin-right: 30rem; */
-  }
-
-  .nav ul {
-    margin-top: 2rem;
-  }
-
-  
-  .container {
-    top: -50px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .container_contents {
-    max-width: 20rem;
-  }
-  
-  .hero-logo {
-    left: 45%;
-  }
-  
   .hero-header h1 {
-    font-size: 1rem ;
+    font-size: 1rem;
     align-self: center;
     margin-top: 4rem;
     line-height: 2px;
   }
 
-  .hero-header p{
-    font-size: .8rem;
+  .hero-header p {
+    font-size: 0.8rem;
   }
 
   .hero-button {
@@ -490,7 +425,7 @@ body {
   }
 
   .hero-btn-img img {
-   align-self: flex-start;
+    align-self: flex-start;
   }
 
   .hero-progress {
@@ -500,7 +435,6 @@ body {
     text-align: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    
   }
 
   .hero-progress ul {
@@ -509,12 +443,12 @@ body {
     margin-bottom: 0.1rem;
   }
 
-  .hero-progress h2{
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+  .hero-progress h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
-  .hero-progress p{
+  .hero-progress p {
     margin-bottom: 1rem;
   }
 
@@ -542,7 +476,7 @@ body {
     flex-direction: column;
   }
 
-  .about-list-text{
+  .about-list-text {
     margin-top: 2rem;
   }
 
@@ -550,12 +484,134 @@ body {
     flex-direction: column;
   }
 
-  .about-btn{
+  .about-btn {
     margin-top: 2rem;
   }
 
   .about-bottom button {
     display: inline-block;
-    padding: 1rem .9rem;
+    padding: 1rem 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .nav {
+    padding: 0 30px;
+  }
+
+  .container {
+    top: -50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container_contents {
+    max-width: 20rem;
+  }
+
+  .hero-logo {
+    left: 45%;
+  }
+
+  .hero-header h1 {
+    font-size: 1rem;
+    align-self: center;
+    margin-top: 4rem;
+    line-height: 2px;
+  }
+
+  .hero-header p {
+    font-size: 0.8rem;
+  }
+
+  .hero-button {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero-btn button {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero-button .hero-btn-img button {
+    display: none;
+  }
+
+  .hero-btn-img {
+    justify-content: center;
+    margin-right: 3rem;
+  }
+
+  .hero-btn-img img {
+    align-self: flex-start;
+  }
+
+  .hero-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-progress ul {
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .hero-progress h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-progress p {
+    margin-bottom: 1rem;
+  }
+
+  .hero-progress li {
+    border: none;
+    border-bottom: 2px solid #a9a9a9;
+  }
+
+  /* .hero-progress:first-of-type{
+    border-he: .3rem;
+  } */
+
+  .hero-progress-bar {
+    max-width: 15rem;
+  }
+
+  #myBar {
+    width: 10rem;
+    height: 0.5rem;
+    border-radius: 5rem;
+  }
+
+  .about-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-list-text {
+    margin-top: 2rem;
+  }
+
+  .about-bottom {
+    flex-direction: column;
+  }
+
+  .about-btn {
+    margin-top: 2rem;
+  }
+
+
+  .about-bottom button {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem 0.9rem;
   }
 }
