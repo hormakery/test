@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <div className="nav">
-        <span className="title">crowdfunding</span>
+        <span className="title">crowdfund</span>
 
         <ul className="list-nav">
           <li>About</li>
@@ -137,7 +137,7 @@ function App() {
             <div className="about-list">
               <div className="about-header">
                 <h3 className="dark-gray-title">Mahogamy Special Edition</h3>
-                <p>Pledge $200 or more</p>
+                < p className="aout-header-subtitle">Pledge $200 or more</p>
               </div>
 
               <p className="about-list-text">
