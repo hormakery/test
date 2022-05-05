@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import { data } from "./components/About";
 
 // interface ItestFunc {
 //   name: string;
@@ -8,7 +9,7 @@ import "./App.css";
 // }
 
 function App() {
-  // const testFunc = ({ name, a, b }: ItestFunc): string => {
+  //  const testFunc = ({ name, a, b }: ItestFunc): string => {
   //   return `my name is ${name}, i am ${a + b} years old`;
   // };
   // testFunc({ name: "joseph", a: 12, b: 13 });
@@ -88,74 +89,29 @@ function App() {
               in this genre. Just like the Latin, the Devanagari is based on pure geometry, particularly circles.
             </p>
 
-            <div className="about-list">
-              <div className="about-header">
-                <h3>Bamboo Stand</h3>
-                <p>Pledge $25 or more</p>
-              </div>
-
-              <p className="about-list-text">
-                Each letterform is nearly monolinear, with optical corrections applied to stroke joints where necessary
-                to maintain an even typographic color. The Devanagari base character height and the Latin ascender
-                height are equal; Latin capital letters are shorter than the Devanagari characters, and the Latin
-                x-height is set rather high.
-              </p>
-
-              <div className="about-bottom">
-                <div className="about-btn">
-                  <h2>101</h2>
-                  <p>left</p>
+            {data.slice(0, 3).map((item) => (
+              <div className={`about-list ${item.availability.quantity === 0 ? "out-of-stock" : undefined}`}>
+                <div className="about-header" key={item.id}>
+                  <h3>{item.title}</h3>
+                  <p>{item.prices}</p>
                 </div>
 
-                <button>Select Reward</button>
-              </div>
-            </div>
+                <p className="about-list-text">{item.content}</p>
 
-            <div className="about-list">
-              <div className="about-header">
-                <h3>Black Edition Stand</h3>
-                <p>Pledge $75 or more</p>
-              </div>
+                <div className="about-bottom">
+                  <div className="about-btn">
+                    <h2>{item.availability.quantity}</h2>
+                    <p>{item.availability.status}</p>
+                  </div>
 
-              <p className="about-list-text">
-                Each letterform is nearly monolinear, with optical corrections applied to stroke joints where necessary
-                to maintain an even typographic color. The Devanagari base character height and the Latin ascender
-                height are equal; Latin capital letters are shorter than the Devanagari characters, and the Latin
-                x-height is set rather high.
-              </p>
-
-              <div className="about-bottom">
-                <div className="about-btn">
-                  <h2>65</h2>
-                  <p>left</p>
+                  <div>
+                    <button>{item.button.text}</button>
+                  </div>
                 </div>
-
-                <button className="mid-btn">Select Reward</button>
               </div>
-            </div>
+            ))}
 
-            <div className="about-list">
-              <div className="about-header">
-                <h3 className="dark-gray-title">Mahogamy Special Edition</h3>
-                < p className="aout-header-subtitle">Pledge $200 or more</p>
-              </div>
-
-              <p className="about-list-text">
-                Each letterform is nearly monolinear, with optical corrections applied to stroke joints where necessary
-                to maintain an even typographic color. The Devanagari base character height and the Latin ascender
-                height are equal; Latin capital letters are shorter than the Devanagari characters, and the Latin
-                x-height is set rather high.
-              </p>
-
-              <div className="about-bottom">
-                <div className="about-btn">
-                  <h2>0</h2>
-                  <p>left</p>
-                </div>
-
-                <button className="last-btn">Out of Stock</button>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

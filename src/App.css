@@ -11,7 +11,7 @@ body {
   font-size: 1rem;
   font-family: Commissioner;
   background: #faf6f6;
-  color: #a9a9a9; 
+  color: #a9a9a9;
   position: relative;
 }
 
@@ -210,7 +210,7 @@ body {
 
 .hero-progress li {
   margin-right: 3rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   padding: 1rem;
   font-weight: 700;
   color: #000;
@@ -340,8 +340,25 @@ body {
   background: #008b8b;
 }
 
-.about-bottom .last-btn {
+.about {
+  background-color: #d1d0d0;
+}
+
+.out-of-stock button {
   background: #a9a9a9;
+}
+
+.out-of-stock p{
+  /* background-color: #d1d0d0; */
+  opacity: 0.5;
+}
+
+.out-of-stock h3{
+  opacity: 0.5;
+}
+
+.out-of-stock h2{
+  color: #a9a9a9;
 }
 
 /* end of about page */
@@ -458,7 +475,6 @@ body {
     flex-direction: column;
     margin-top: 2rem;
     margin-bottom: 0.1rem;
-
   }
 
   .hero-progress h2 {
@@ -503,8 +519,9 @@ body {
   }
 
   .about-bottom button {
+    align-items: flex-start;
     justify-content: flex-start;
-    padding: 0.6rem 0.7rem;
+    padding: 0.7rem 0.9rem;
   }
 }
 
